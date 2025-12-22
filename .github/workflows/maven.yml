@@ -16,7 +16,7 @@ on:
 
 jobs:
   compile:
-    runs-on: self-host
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v4
@@ -32,7 +32,7 @@ jobs:
       run: mvn compile
       
   security-check:
-    runs-on: self-host
+    runs-on: self-hosted
     needs: compile
 
     steps:
@@ -55,7 +55,7 @@ jobs:
       run: gitleaks detect source . -r gitleaks-report.json -f json
 
   test:
-    runs-on: self-host
+    runs-on: self-hosted
     needs: security-check
 
     steps:
@@ -72,7 +72,7 @@ jobs:
       run: mvn test
 
   Build_project_sonar:
-    runs-on: self-host
+    runs-on: self-hosted
     needs: test
     
     steps:
