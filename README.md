@@ -1,4 +1,10 @@
 # DevOps Project with Github Action pipeline
+
+<div align="center">
+  <img src="./assets/flow.png" alt="Logo" width="100%" height="60%">
+
+ </div>
+
 ## clone the repo on your workstation
 
 ```bash
